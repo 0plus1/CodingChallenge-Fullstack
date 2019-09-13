@@ -16,7 +16,7 @@
                 @foreach($shelf->books as $book)
                 <tr>
                     <td>{{ $book->book_id }}</td>
-                    <td><span class="faux-link js-action" data-event="click" data-action="call-api" data="url" data-param="{{ $book->book_id }}">{{ $book->name }}</span></td>
+                    <td><span class="faux-link js-action" data-event="click" data-action="callapi" data-url="{{ Url('/api/metadata/read/all') }}" data-param="{{ $book->book_id }}">{{ $book->name }}</span></td>
                     <td>{{ $book->isbn }}</td>
                 </tr>
                 @endforeach
