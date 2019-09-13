@@ -12,3 +12,5 @@
 */
 
 Route::get('/', ['as'=> 'welcome','uses' => 'WebController@index']);
+Route::get('/shelf',['uses'=>'ShelfController@list']);
+Route::get('/shelf/{shelf_slug}/read',['uses'=>'ShelfController@read']);
