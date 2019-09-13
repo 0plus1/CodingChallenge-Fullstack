@@ -1,12 +1,16 @@
-export default class ajax {
+export default class Ajax {
   constructor() {
+    Ajax.init();
+  }
+
+  static init() {
     document.addEventListener('DOMContentLoaded', () => {
       const jsAction = document.querySelectorAll('.js-action');
       jsAction.forEach((link) => {
         const event = link.dataset.event || 'click';
         link.addEventListener(event, (e) => {
           const target = e.target;
-          ajax[target.dataset.action](target.dataset.url, target.dataset.param);
+          Ajax[target.dataset.action](target.dataset.url, target.dataset.param);
         });
       });
     });
