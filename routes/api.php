@@ -13,4 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::group([
+  'middleware' => [
+      'throttle:200,1'
+  ]
+], function () {
+  Route::get('/shelf/{shelf_slug}/read', 'API\ShelfController@index');
+  Route::get('/metadata/read/{book_id}', 'API\BookController@show');
+});
+
 Route::get('/metadata/read/all', ['as'=> 'api.metadata.all', 'uses' => 'ApiController@metadata']);
