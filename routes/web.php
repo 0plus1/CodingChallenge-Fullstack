@@ -12,3 +12,7 @@
 */
 
 Route::get('/', ['as'=> 'welcome','uses' => 'WebController@index']);
+
+Route::get('shelf/{shelf_slug}/read/',
+    ['as'=> 'read','uses' => 'WebController@read'])
+    ->where('shelf_slug', '[\w\d\-\_]+');
