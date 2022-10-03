@@ -1,11 +1,23 @@
-import React from "react";
-import axios from "axios"
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Shelf from "./Shelf";
 
 const Shelives = () => {
+  const [shelives, setShelives] = useState([]);
 
-  return <div className={'container'}>
-    <label className={'label'}>List</label>
-  </div>;
+  useEffect(() => {
+    axios.get("/api/shelf/all").then((response) => {
+      setShelives(response.data);
+    });
+  }, shelives.length);
+
+  return (
+    <ul>
+      {shelives.map((item) => (
+        <Shelf name={item.name} key={item.id} slug={item.slug} />
+      ))}
+    </ul>
+  );
 };
 
 export default Shelives;
