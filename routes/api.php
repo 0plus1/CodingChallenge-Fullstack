@@ -13,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/metadata/read/all', ['as'=> 'api.metadata.all', 'uses' => '\App\Http\Controllers\API\BookController@getMiddleware']);
+Route::get('/metadata/read/all', ['as'=> 'api.metadata.all', 'uses' => '\App\Http\Controllers\API\BookController@getMetadata']);
 Route::get('/shelf/{shelf_slug}/read', ['as'=> 'api.shelf.books.read', 'uses' => '\App\Http\Controllers\API\ShelfController@getBooks']);
 Route::get('/shelf/all', ['as'=> 'api.shelf.all', 'uses' => '\App\Http\Controllers\API\ShelfController@getAllShelives']);

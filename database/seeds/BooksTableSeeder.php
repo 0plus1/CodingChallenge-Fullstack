@@ -24,6 +24,7 @@ class BooksTableSeeder extends Seeder
                 'name' => $faker->company.' '.$faker->city,
                 'shelf_id' => 1,
                 'isbn' => $faker->isbn10,
+                'published_at' => $faker->date(),
                 'created_at'=> \Carbon\Carbon::now()->toDateTimeString(),
                 'updated_at'=> \Carbon\Carbon::now()->toDateTimeString()
             ]);
