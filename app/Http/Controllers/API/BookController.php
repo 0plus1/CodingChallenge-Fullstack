@@ -9,7 +9,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use function response;
 
-class ApiController extends BaseController
+class BookController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 

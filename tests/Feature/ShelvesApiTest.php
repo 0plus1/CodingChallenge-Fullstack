@@ -27,8 +27,12 @@ class ShelvesApiTest extends TestCase
     {
         $response = $this->get(route('api.shelf.books.read', ['shelf_slug' => $this->slug]));
 
-        $response
-            ->assertStatus(200);
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                '*' => [
+                    'name', 'isbn', 'id'
+                ]
+            ]);
     }
 
     /**
