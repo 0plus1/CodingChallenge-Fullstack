@@ -38,7 +38,7 @@ class BookController extends BaseController
             $jsonable[$book->book_id] = [
                 'published_at' => $book->published_at,
                 'author' => optional($book->authors)->implode(','),
-                'cover' => optional($book->cover)->imageUrl,
+                'cover' => optional($book->cover)->image_url,
             ];
         }
 
