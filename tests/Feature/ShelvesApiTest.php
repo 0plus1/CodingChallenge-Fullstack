@@ -10,7 +10,9 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class ShelvesApiTest extends TestCase
 {
     use WithFaker;
+
     private $slug;
+
     public function setUp()
     {
         parent::setUp();
@@ -30,7 +32,9 @@ class ShelvesApiTest extends TestCase
         $response->assertStatus(200)
             ->assertJsonStructure([
                 '*' => [
-                    'name', 'isbn', 'id'
+                    'name',
+                    'isbn',
+                    'id'
                 ]
             ]);
     }
@@ -46,6 +50,20 @@ class ShelvesApiTest extends TestCase
 
         $response
             ->assertStatus(404);
+    }
+
+    public function testGetAllShelvies()
+    {
+        $response = $this->get(route('api.shelf.all'));
+
+        $response->assertStatus(200)
+            ->assertJsonStructure([
+                '*' => [
+                    'name',
+                    'slug',
+                    'id'
+                ]
+            ]);
     }
 
 

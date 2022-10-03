@@ -37,4 +37,16 @@ class ShelfController extends BaseController
 
         return response()->json($data);
     }
+
+    public function getAllShelives(){
+        $shelvies = $this->repository->getAllShelvies();
+        $data = $shelvies->transform(function ($shelf){
+            return [
+                'name' => $shelf->name,
+                'slug' => $shelf->slug,
+                'id' => $shelf->shelf_id,
+            ];
+        })->all();
+        return response()->json($data);
+    }
 }

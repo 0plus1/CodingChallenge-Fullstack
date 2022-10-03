@@ -28,4 +28,8 @@ class ShelfRepository
     {
         return $shelf->books;
     }
+
+    public function getAllShelvies(){
+        return $this->shelf->all();
+    }
 }
