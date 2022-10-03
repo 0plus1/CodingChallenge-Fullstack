@@ -1,24 +1,42 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    },
-    "dependencies": {
-        "bootstrap": "^4.0.0-beta.2",
-        "lodash": "^4.17.4",
-        "jquery": "^3.1.1"
-    },
-    "devDependencies": {
-        "cross-env": "^5.0.1",
-        "eslint": "^4.10.0",
-        "eslint-config-airbnb-base": "^12.1.0",
-        "eslint-plugin-import": "^2.8.0",
-        "laravel-mix": "^1.0"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.6.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "laravel-mix": "^1.7.2"
+  },
+  "name": "CodingChallenge-Fullstack",
+  "description": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/605e37f6e1504348b5b29d31e3d90f6c)](https://www.codacy.com/app/0plus1/CodingChallenge-Fullstack?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=0plus1/CodingChallenge-Fullstack&amp;utm_campaign=Badge_Grade) [![Build Status](https://travis-ci.org/0plus1/CodingChallenge-Fullstack.svg?branch=master)](https://travis-ci.org/0plus1/CodingChallenge-Fullstack)",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugostech/CodingChallenge-Fullstack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugostech/CodingChallenge-Fullstack/issues"
+  },
+  "homepage": "https://github.com/hugostech/CodingChallenge-Fullstack#readme"
 }
