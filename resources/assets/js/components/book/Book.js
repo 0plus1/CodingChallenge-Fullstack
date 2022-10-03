@@ -3,17 +3,12 @@ import axios from "axios";
 
 const Book = (props) => {
     const bookClickHandler = (event) => {
-        axios.get('/api/metadata/read/all', {
-            params: {
-                book_id: event.target.getAttribute('book_id')
-            }
-        }).then(response => {
-            console.log(response.data)
-        })
+        event.preventDefault();
+        props.bookClickHandler(props.bookId)
     }
 
     return (
-        <li onClick={bookClickHandler} book_id={props.key}><strong>{props.name}</strong> ISBN: {props.isbn}</li>
+        <li onClick={bookClickHandler}><strong>{props.name}</strong> ISBN: {props.isbn}</li>
     );
 };
 
