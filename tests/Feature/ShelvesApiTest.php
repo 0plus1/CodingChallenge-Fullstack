@@ -7,7 +7,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class ShelvesTest extends TestCase
+class ShelvesApiTest extends TestCase
 {
     use WithFaker;
     private $slug;
@@ -25,7 +25,7 @@ class ShelvesTest extends TestCase
      */
     public function testReadAllBooksForVaildShelfSlug()
     {
-        $response = $this->get(route('api.shelf.books.read'), ['shelf_slug' => $this->faker->slug]);
+        $response = $this->get(route('api.shelf.books.read', ['shelf_slug' => $this->slug]));
 
         $response
             ->assertStatus(200);
@@ -38,7 +38,7 @@ class ShelvesTest extends TestCase
      */
     public function testReadAllBooksForInvaildShelfSlug()
     {
-        $response = $this->get(route('api.shelf.books.read'), ['shelf_slug' => $this->faker->slug]);
+        $response = $this->get(route('api.shelf.books.read', ['shelf_slug' => $this->faker->slug]));
 
         $response
             ->assertStatus(404);
