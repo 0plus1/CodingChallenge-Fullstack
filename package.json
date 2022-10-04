@@ -10,15 +10,24 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "dependencies": {
+        "axios": "^0.27.2",
         "bootstrap": "^4.0.0-beta.2",
+        "jquery": "^3.1.1",
         "lodash": "^4.17.4",
-        "jquery": "^3.1.1"
+        "popper.js": "^1.16.1",
+        "vue": "^2.5.7"
     },
     "devDependencies": {
+        "autoprefixer": "^10.4.12",
         "cross-env": "^5.0.1",
         "eslint": "^4.10.0",
         "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.8.0",
-        "laravel-mix": "^1.0"
+        "laravel-mix": "^4.0.14",
+        "laravel-mix-purgecss": "^4.1",
+        "resolve-url-loader": "^3.1.0",
+        "sass": "^1.55.0",
+        "sass-loader": "^7.3.1",
+        "vue-template-compiler": "^2.7.10"
     }
 }

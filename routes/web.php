@@ -12,3 +12,5 @@
 */
 
 Route::get('/', ['as'=> 'welcome','uses' => 'WebController@index']);
+
+Route::get('/shelf/{shelf_slug}/read', ['as' => 'api.shelf.read', 'uses' => 'ShelfController@search']);
